@@ -16,6 +16,8 @@ Consider supporting me on [ko-fi](https://ko-fi.com/thefurrydevil), I really nee
 I plan to add other methods of loading my DLLs.
 
 ## Features
+I still have many things planned to add!
+
 ### Lua functions
 All Lua functions added by this DLL are prefixed with _ to avoid name clashing.
 

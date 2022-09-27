@@ -11,6 +11,7 @@ I still have many things planned, but since the progress is so slow I wanted to 
 Consider supporting me on [ko-fi](https://ko-fi.com/thefurrydevil), I really need it.
 
 ## Installation
+Put **hasiboundlite.pak** into your mods folder.
 - Replacer method: Navigate to your Starbound's win64 folder, rename **zlib1.dll** as to not override it, and paste my **zlib1.dll** and **hasiboundlite.dll**
 
 I plan to add other methods of loading my DLLs.
@@ -24,6 +25,8 @@ All Lua functions added by this DLL are prefixed with _ to avoid name clashing.
 `table or boolean` `_keys([number])` if a number is given returns whether the [SDL_ScanCode](https://wiki.libsdl.org/SDL_Scancode) key is pressed, else returns a table with every pressed key, in **string:SDL_ScanCode** pairs
 
 `boolean` `_textInputActive()` returns whether Starbound wants text input (used to optionally ignore keypresses from **\_keys()**
+
+`integer` `_reload([string or table])` if a string is given, reloads every asset matching it using Lua's pattern matching, if a table is given reloads all files equal to keys or values that are strings, else reloads every asset. This does **not** load new assets, and does not rebuild databases, thus not everything can be updated using this. It is however extremely fast. An example is included in the .pak that lets you reload every asset by holding left shit and pressing F5!
 
 `[string]` `_clipboard([string])` if a string is given sets that string as Windows clipboard text, else returns the current
 

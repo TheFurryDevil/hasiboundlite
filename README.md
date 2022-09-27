@@ -26,7 +26,7 @@ All Lua functions added by this DLL are prefixed with _ to avoid name clashing.
 
 `boolean` `_textInputActive()` returns whether Starbound wants text input (used to optionally ignore keypresses from **\_keys()**
 
-`integer` `_reload([string or table])` if a string is given, reloads every asset matching it using Lua's pattern matching, if a table is given reloads all files equal to keys or values that are strings, else reloads every asset. This does **not** load new assets, and does not rebuild databases, thus not everything can be updated using this. It is however extremely fast. An example is included in the .pak that lets you reload every asset by holding left shit and pressing F5!
+`integer` `_reload([string or table])` if a string is given, reloads every asset matching it using Lua's pattern matching, if a table is given reloads all files equal to keys or values that are strings, else reloads every asset. Returns count of reloaded assets. This does **not** load new assets, and does not rebuild databases, thus not everything can be updated using this. It is however extremely fast. An example is included in the .pak that lets you reload every script by pressing F5, and every asset if you additionally hold left shift!
 
 `[string]` `_clipboard([string])` if a string is given sets that string as Windows clipboard text, else returns the current
 

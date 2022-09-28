@@ -12,7 +12,7 @@ Consider supporting me on [ko-fi](https://ko-fi.com/thefurrydevil), I really nee
 
 ## Installation
 Put **hasiboundlite.pak** into your mods folder.
-- Replacer method: Navigate to your Starbound's win64 folder, rename **zlib1.dll** as to not override it, and paste my **zlib1.dll** and **hasiboundlite.dll**
+- Replacer method: Navigate to your Starbound's win64 folder, rename **zlib1.dll** as to not override it, and paste my **zlib1.dll** and **hasiboundlite.dll**. A downside is, this will also load the dll when you run the server.exe, which will crash it.
 
 I plan to add other methods of loading my DLLs.
 

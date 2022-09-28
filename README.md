@@ -78,6 +78,7 @@ All Lua functions added by this DLL are prefixed with _ to avoid name clashing.
 - show your own characters (local entities) name when holding the highlight key `tweaks.show_local_names`
 - render gui ontop of debug `tweaks.interface_over_debug`
 - fix chatbubble movement delay
+- players can't kick you out of seats anymore
 
 ## Config
 The DLL uses its own config that can be modified ingame using commands.

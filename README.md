@@ -24,7 +24,7 @@ All Lua functions added by this DLL are prefixed with _ to avoid name clashing.
 
 `table or boolean` `_keys([number])` if a number is given returns whether the [SDL_ScanCode](https://wiki.libsdl.org/SDL_Scancode) key is pressed, else returns a table with every pressed key, in **string:SDL_ScanCode** pairs
 
-`boolean` `_textInputActive()` returns whether Starbound wants text input (used to optionally ignore keypresses from **\_keys()**
+`boolean` `_textInputActive()` returns string **"chat"** if the chat input field has focus, else returns whether Starbound wants text input (used to optionally ignore keypresses from **\_keys()**
 
 `integer` `_reload([string or table])` if a string is given, reloads every asset matching it using Lua's pattern matching, if a table is given reloads all files equal to keys or values that are strings, else reloads every asset. Returns count of reloaded assets. This does **not** load new assets, and does not rebuild databases, thus not everything can be updated using this. It is however extremely fast. An example is included in the .pak that lets you reload every script by pressing F5, and every asset if you additionally hold left shift!
 
@@ -32,7 +32,10 @@ All Lua functions added by this DLL are prefixed with _ to avoid name clashing.
 
 `table` `_unsafe(string)` if called with the configured unsafe_key (see Config section below) returns a table with functions that are normally unavailable, else throws an error. This is used to access functions like **load** and **os.execute** without disabling Starbound's **safeScripts** setting
 
+`[string]` `_star_chat_text()` returns the current chat input field text
+
 `player` `_star_player()` returns userdata with functions for the current player entity
+- `add_chat_message(string)`
 - `integer, integer` `get_aim_position()`
 - `set_body_directives(string)`
 - `set_description(string)`

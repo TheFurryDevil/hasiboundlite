@@ -51,6 +51,7 @@ All Lua functions added by this DLL are prefixed with _ to avoid name clashing.
 - `set_hair_type(string)`
 - `set_hair_directives(string)`
 - `set_name(string)`
+- `set_personality(table)` every field is optional and will update the current personality `{idle = "idle.1", armIdle = "idle.1", headOffset = {0, 0}, armOffset = {0, 0}}`
 - `set_species(string)`
 
 `image` `_star_image(string)` returns userdata with functions for the given image

@@ -76,13 +76,17 @@ All Lua functions added by this DLL are prefixed with _ to avoid name clashing.
 
 ### Privacy
 - do not send player inventory to server (prevents advanced item stealing)
+- do not send aim position to server (only when both hands are empty) `privacy.share_cursor`
 
-### Misc
+### Tweaks
 - world geometry can be made "hollow", allowing you to walk inside of it (if inside of it using a teleport, for example). This also vastly improves performance with /boxes enabled `physics.hollow_world`
-- show your own characters (local entities) name when holding the highlight key `tweaks.show_local_names`
+- show your own characters (local entities) name when holding the highlight key (multiplayer only) `tweaks.show_local_names`
 - render gui ontop of debug `tweaks.interface_over_debug`
 - fix chatbubble movement delay
 - players can't kick you out of seats anymore
+- set team type to null (makes hostiles ignore you) `tweaks.null_team`
+- always load player entities in world (can prevent lagspikes, but might reduce overall performance) `tweaks.all_presence`
+- don't unload chunks (can prevent lagspikes and improve fast movement across planets, but might reduce overall performance) `tweaks.unload_chunks`
 
 ## Config
 The DLL uses its own config that can be modified ingame using commands.
